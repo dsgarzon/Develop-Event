@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+//import 'package:get/get_state_manager/src/simple/get_state.dart';
+//import 'package:flutter_auth/controllers.dart/login_contoller.dart';
 
 class Background extends StatelessWidget {
   final Widget child;
   const Background({
     Key key,
-    @required this.child,
+    @required this.child, //GetBuilder<LoginController> body,
   }) : super(key: key);
 
   @override

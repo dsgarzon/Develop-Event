@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Login/login_screen.dart';
-import 'package:flutter_auth/Screens/Signup/components/background.dart';
-import 'package:flutter_auth/Screens/Signup/components/or_divider.dart';
-import 'package:flutter_auth/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_auth/pages/Login/components/background.dart';
+import 'package:flutter_auth/pages/Login/login_screen.dart';
+import 'package:flutter_auth/pages/Signup/components/or_divider.dart';
+import 'package:flutter_auth/pages/Signup/components/social_icon.dart';
+//import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,24 +18,32 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
             SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              "assets/icons/signup.svg",
-              height: size.height * 0.35,
+            Text(
+              "SIGN UP",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            SizedBox(height: size.height * 0.04),
+            RoundedInputField(
+              hintText: "Name",
+              icon: Icons.person,
+              onChanged: (value) {},
             ),
             RoundedInputField(
-              hintText: "Your Email",
+              hintText: "Email",
+              icon: Icons.email,
               onChanged: (value) {},
             ),
             RoundedPasswordField(
+              hintText: "Password",
+              onChanged: (value) {},
+            ),
+            RoundedPasswordField(
+              hintText: "Write your password again ",
               onChanged: (value) {},
             ),
             RoundedButton(
-              text: "SIGNUP",
+              text: "SIGN UP",
               press: () {},
             ),
             SizedBox(height: size.height * 0.03),
