@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "182427770791",
+    "project_id": "develop-event",
+    "storage_bucket": "develop-event.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182427770791:android:e28a37e0d386dffcb2e082",
+        "android_client_info": {
+          "package_name": "com.example.flutter_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182427770791-oo0glq3bb49eonmgne0aojgtccejr9vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASULMJtwYFuMKBIK4nNw0SFV32TzZ8RdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182427770791-oo0glq3bb49eonmgne0aojgtccejr9vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
