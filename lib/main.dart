@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/constants.dart';
-import 'package:flutter_auth/pages/Login/login_screen.dart';
+import 'package:flutter_auth/ui/pages/Login/login_screen.dart';
+import 'package:flutter_auth/ui/theme/colors.dart';
 //import 'package:get/get.dart';
 
 void main() => runApp(MyApp());

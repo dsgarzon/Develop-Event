@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
-import 'package:flutter_auth/components/rounded_button.dart';
-import 'package:flutter_auth/components/rounded_input_field.dart';
-import 'package:flutter_auth/components/rounded_password_field.dart';
-//import 'package:flutter_auth/controllers.dart/login_contoller.dart';
-import 'package:flutter_auth/pages/Login/components/background.dart';
-import 'package:flutter_auth/pages/Signup/signup_screen.dart';
+import 'package:flutter_auth/ui/pages/Login/components/background.dart';
+import 'package:flutter_auth/ui/pages/Signup/signup_screen.dart';
+import 'package:flutter_auth/ui/widgets/already_have_an_account_acheck.dart';
+import 'package:flutter_auth/ui/widgets/rounded_button.dart';
+import 'package:flutter_auth/ui/widgets/rounded_input_field.dart';
+import 'package:flutter_auth/ui/widgets/rounded_password_field.dart';
 
 import '../../menu.dart';
 //import 'package:get/get.dart';

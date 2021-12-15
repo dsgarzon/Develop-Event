@@ -1,33 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/components/text_field_container.dart';
-import 'package:flutter_auth/constants.dart';
+import 'package:flutter_auth/ui/theme/colors.dart';
+import 'package:flutter_auth/ui/widgets/text_field_container.dart';
 
-class RoundedInputField extends StatelessWidget {
+class RoundedPasswordField extends StatelessWidget {
   final String hintText;
-  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedInputField({
+  const RoundedPasswordField({
     Key key,
-    this.hintText,
-    this.icon, //= Icons.email,
     this.onChanged,
+    this.hintText,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-      child:TextField(
+      child: TextField(
+        obscureText: true,
         onChanged: onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
           icon: Icon(
-            icon,
+            Icons.lock,
+            color: kPrimaryColor,
+          ),
+          suffixIcon: Icon(
+            Icons.visibility,
             color: kPrimaryColor,
           ),
           hintText: hintText,
           border: InputBorder.none,
         ),
-        //keyboardType: TextInputType.emailAddress,
       ),
     );
   }
