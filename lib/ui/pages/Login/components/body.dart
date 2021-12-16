@@ -22,13 +22,15 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: size.height * 0.03),
+            soles(size: size.height * 0.05),
             Text(
               "DEVELOP",
-              style: TextStyle(fontSize: 40),
+              style: TextStyle(fontSize: size.width * 0.1),
             ),
             Text(
               "EVENT",
-              style: TextStyle(fontSize: 40),//fontWeight: FontWeight.bold
+              style: TextStyle(fontSize: size.width * 0.1),//fontWeight: FontWeight.bold
             ),            
             SizedBox(height: size.height * 0.03),
             Image.asset(
@@ -78,3 +80,14 @@ class Body extends StatelessWidget {
     );
   }
 }
+  Row soles({double size}) {
+    return Row(
+                children:[
+                  Expanded(child: Container(),
+                  ),
+                  Icon(Icons.wb_sunny,  size: size),
+                  SizedBox(width: 10),
+                  Icon(Icons.wb_sunny_outlined, size: size),
+                ],
+              );
+  }
