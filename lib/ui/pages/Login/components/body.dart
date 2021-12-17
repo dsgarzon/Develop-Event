@@ -6,13 +6,22 @@ import 'package:flutter_auth/ui/widgets/rounded_button.dart';
 import 'package:flutter_auth/ui/widgets/rounded_input_field.dart';
 import 'package:flutter_auth/ui/widgets/rounded_password_field.dart';
 
-import '../../menu.dart';
 //import 'package:get/get.dart';
 
-class Body extends StatelessWidget {
-  const Body({
-    Key key,
+class Body extends StatefulWidget {
+
+  Body({
+    Key? key,
   }) : super(key: key);
+
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  var emailController = TextEditingController();
+
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,22 +51,25 @@ class Body extends StatelessWidget {
               hintText: "Email",
               icon: Icons.email,
               onChanged: (value) {},
+              controller: emailController,
             ),
             RoundedPasswordField(
               hintText: "Password",
               onChanged: (value) {},
+              controller: passwordController,
             ),
             RoundedButton(
               text: "LOGIN",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return MenuScreen();
-                    },
-                  ),
-                );
+                
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) {
+                //       return MenuScreen();
+                //     },
+                //   ),
+                // );
               },
             ),
             SizedBox(height: size.height * 0.03),
@@ -80,7 +92,7 @@ class Body extends StatelessWidget {
     );
   }
 }
-  Row soles({double size}) {
+  Row soles({required double size}) {
     return Row(
                 children:[
                   Expanded(child: Container(),

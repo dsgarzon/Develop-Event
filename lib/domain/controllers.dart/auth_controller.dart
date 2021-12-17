@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/ui/pages/Login/login_screen.dart';
 import 'package:flutter_auth/ui/pages/menu.dart';
 import 'package:get/get.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -27,9 +26,9 @@ class AuthController extends GetxController {
       Get.offAll(()=>MenuScreen());
     }
   }
-  Future<void> register (name, email, password, password2) async {
+  void register (name, email, password, password2){
     try {
-    await auth.createUserWithEmailAndPassword(email: email, password: password);
+    auth.createUserWithEmailAndPassword(email: email, password: password);
     } catch (e) {
       Get.snackbar("About User", "User message",
       backgroundColor: Colors.redAccent,
